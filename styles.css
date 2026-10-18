@@ -61,7 +61,7 @@ h2 {
 }
 
 
-ul li {
+ul li{
   float: left;
   display: block;
   border-style: solid;
@@ -73,7 +73,17 @@ ul li {
   box-sizing:border-box;
   width: 200px;
   position: sticky;
+  text-align: center;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
 
 table, tr, th, td, caption {
     border: 1px solid #e7871b;
