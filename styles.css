@@ -126,3 +126,51 @@ nav a.active {
   font-weight: bold;
 }   
 
+.card {
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 150x;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+h5 {
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+    font-size: 24px;
+}
+
+.card p{
+    text-shadow: 0 0 5px #999;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card1:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Housing.webp)
+}
+.card2:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Hypixel-bg-artwork.webp)
+}
+.card1 {
+    background-image: url(images/Housing.webp)
+}
+
+.card2 {
+    background-image: url(images/Hypixel-bg-artwork.webp)
+}
