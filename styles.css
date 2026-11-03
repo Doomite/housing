@@ -1,3 +1,6 @@
+/* ==========================================
+   1. FONTS (@font-face)
+   ========================================== */
 @font-face {
     font-family: "Neuton";
     src: url("fonts/Neuton-Regular.ttf") format("truetype");
@@ -19,9 +22,14 @@
     font-style: italic;
 }
 
+/* ==========================================
+   2. GLOBAL & BASE STYLES
+   ========================================== */
 body {
-    font-family: Neuton;
+    font-family: "Neuton", serif;
     color: white;
+    margin: 0;
+    padding-top: 70px; /* Prevents content from hiding behind fixed nav */
 }
 
 .container {
@@ -45,8 +53,11 @@ body {
     background-size: cover;
 }
 
+/* ==========================================
+   3. TYPOGRAPHY
+   ========================================== */
 h1 {
-    font-family: Neuton;
+    font-family: "Neuton", serif;
     color: white;
     text-shadow: 3px 3px 10px black;
     margin-left: 800px;
@@ -54,53 +65,70 @@ h1 {
 }
 
 h2 {
-    font-family: Neuton;
+    font-family: "Neuton", serif;
     color: #e7871b;
     text-shadow: 3px 3px 10px black;
     margin-left: 850px;
     font-size: 70px;
-    position:relative;
+    position: relative;
     bottom: 70px;
 }
 
-
-ul li {
-  float: left;
-  display: block;
-  border-style: solid;
-  border-color: #6d8692;
-  border-width: 4px;
-  font-family: Neuton;
-  z-index: 1000;
-  box-sizing:border-box;
-  width: 100%;
-  position: sticky;
-  text-align: center;
-  font-size: 30px;
-  font-family: Neuton;
-  background-color: rgba(221, 178, 83);
-  padding: 1%;
-  cursor: pointer;
-  border-right: 5px solid #a36a1f;
-  border-left: 5px solid #b3711c;
+h5 {
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+    font-size: 24px;
 }
 
+/* ==========================================
+   4. NAVIGATION BAR
+   ========================================== */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(221, 178, 83, 0.95);
+    border-bottom: 4px solid #b3711c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
 
-li a {
+nav ul li {
+    display: inline-block;
+    font-family: "Neuton", serif;
+    font-size: 22px;
+    border-right: 2px solid #a36a1f;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+nav ul li:first-child {
+    border-left: 2px solid #a36a1f;
+}
+
+nav ul li:hover {
+    background-color: #f3c258;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 24px;
     text-decoration: none;
     color: #30250b;
+    font-weight: 700;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
+nav a.active {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    background-color: #9b5d16;
 }
 
-
+/* ==========================================
+   5. TABLES
+   ========================================== */
 table, tr, th, td, caption {
     border: 1px solid #e7871b;
     border-collapse: collapse;
@@ -109,22 +137,17 @@ table, tr, th, td, caption {
 }
 
 th {
-    border: 1px solid #e7871b;
-    border-collapse: collapse;
-    padding: 0.5rem;
-    color: white;
     background-color: #9b5d16;
 }
 
+/* ==========================================
+   6. CARDS & IMAGES
+   ========================================== */
 .housingimg img {
     width: 500px;
     position: relative;
     bottom: 350px;
 }
-
-nav a.active {
-  font-weight: bold;
-}   
 
 .card {
     width: 200px;
@@ -134,43 +157,39 @@ nav a.active {
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
-    margin: 10px 150x;
+    margin: 10px 15px;
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
 }
 
-h5 {
-    color: #fff;
-    text-shadow: 0 0 5px #999;
-    font-size: 24px;
-}
-
-.card p{
+.card p {
     text-shadow: 0 0 5px #999;
     font-size: 12px;
     text-decoration: none;
     color: #fff;
 }
 
-.card a{
+.card a {
     text-decoration: none;
 }
 
-.card:hover{
-    transform:translateY(-10px);
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.card1:hover{
-        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Housing.webp)
-}
-.card2:hover{
-        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/Hypixel-bg-artwork.webp)
-}
 .card1 {
-    background-image: url(images/Housing.webp)
+    background-image: url('images/Housing.webp');
 }
 
 .card2 {
-    background-image: url(images/Hypixel-bg-artwork.webp)
+    background-image: url('images/Hypixel-bg-artwork.webp');
+}
+
+.card1:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/Housing.webp');
+}
+
+.card2:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/Hypixel-bg-artwork.webp');
 }
