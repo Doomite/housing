@@ -2,6 +2,13 @@
    1. FONTS (@font-face)
    ========================================== */
 @font-face {
+    font-family: "Minecraft";
+    src: url("fonts/Minecraft.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+   @font-face {
     font-family: "Neuton";
     src: url("fonts/Neuton-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -102,9 +109,6 @@ nav ul li {
     box-sizing: border-box;
     cursor: pointer;
     transition: background-color 0.2s ease;
-}
-
-nav ul li:first-child {
     border-left: 2px solid #a36a1f;
 }
 
@@ -161,17 +165,19 @@ th {
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
+    font-family: "Minecraft";
 }
 
 .card p {
-    text-shadow: 0 0 5px #999;
+    text-shadow: 0 0 5px #000;
     font-size: 12px;
     text-decoration: none;
     color: #fff;
+    font-family: "Minecraft";
 }
 
 .card a {
-    text-decoration: none;
+    font-family: "Minecraft";
 }
 
 .card:hover {
@@ -179,17 +185,33 @@ th {
 }
 
 .card1 {
-    background-image: url('images/Housing.webp');
+    background-image: url('images/entrenched.png');
 }
 
 .card2 {
-    background-image: url('images/Hypixel-bg-artwork.webp');
+    background-image: url('images/doktorcurse.png');
+}
+
+.card3 {
+    background-image: url('images/peakshore.png');
+}
+
+.card4 {
+    background-image: url('images/capitalism.png');
 }
 
 .card1:hover {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/Housing.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/entrenched.png');
 }
 
 .card2:hover {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/Hypixel-bg-artwork.webp');
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/doktorcurse.png');
+}
+
+.card3:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/peakshore.png');
+}
+
+.card4:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/capitalism.png');
 }
