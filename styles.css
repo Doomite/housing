@@ -1,42 +1,40 @@
-/* ==========================================
-   1. FONTS (@font-face)
-   ========================================== */
+/* Fonts */
 @font-face {
-    font-family: "Minecraft";
-    src: url("fonts/Minecraft.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Mojang";
+    src: url("fonts/Mojang-Regular.ttf") format("truetype");
 }
 
-   @font-face {
+@font-face {
+    font-family: "Mojang";
+    src: url("fonts/Mojang-Bold.ttf") format("truetype");
+        font-weight: 700;
+}
+
+@font-face {
     font-family: "Neuton";
     src: url("fonts/Neuton-Regular.ttf") format("truetype");
     font-weight: 400;
-    font-style: normal;
 }
 
 @font-face {
     font-family: "Neuton";
     src: url("fonts/Neuton-Bold.ttf") format("truetype");
     font-weight: 700;
-    font-style: normal;
 }
 
 @font-face {
     font-family: "Neuton";
     src: url("fonts/Neuton-Italic.ttf") format("truetype");
-    font-weight: 400;
     font-style: italic;
 }
 
-/* ==========================================
-   2. GLOBAL & BASE STYLES
-   ========================================== */
+/* Global styles */
 body {
     font-family: "Neuton", serif;
     color: white;
     margin: 0;
-    padding-top: 70px; /* Prevents content from hiding behind fixed nav */
+    padding-top: 0;
+    background-color: #121212;
 }
 
 .container {
@@ -60,9 +58,7 @@ body {
     background-size: cover;
 }
 
-/* ==========================================
-   3. TYPOGRAPHY
-   ========================================== */
+/* Typography */
 h1 {
     font-family: "Neuton", serif;
     color: white;
@@ -87,9 +83,7 @@ h5 {
     font-size: 24px;
 }
 
-/* ==========================================
-   4. NAVIGATION BAR
-   ========================================== */
+/* Nav Bar */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -103,13 +97,11 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    font-family: "Neuton", serif;
     font-size: 22px;
     border-right: 2px solid #a36a1f;
-    box-sizing: border-box;
+    border-left: 2px solid #a36a1f;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    border-left: 2px solid #a36a1f;
 }
 
 nav ul li:hover {
@@ -130,9 +122,7 @@ nav a.active {
     background-color: #9b5d16;
 }
 
-/* ==========================================
-   5. TABLES
-   ========================================== */
+/* Tables */
 table, tr, th, td, caption {
     border: 1px solid #e7871b;
     border-collapse: collapse;
@@ -144,74 +134,154 @@ th {
     background-color: #9b5d16;
 }
 
-/* ==========================================
-   6. CARDS & IMAGES
-   ========================================== */
-.housingimg img {
-    width: 500px;
-    position: relative;
-    bottom: 350px;
+/* Cards layout */
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card-link {
+    text-decoration: none;
 }
 
 .card {
-    width: 200px;
-    height: 250px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px 25px;
+    width: 220px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 12px;
+    padding: 20px;
     box-sizing: border-box;
     cursor: pointer;
-    margin: 10px 15px;
+    position: relative;
+    overflow: hidden;
     background-position: center;
     background-size: cover;
-    transition: transform 0.5s;
-    font-family: "Minecraft";
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+    font-family: "Mojang", sans-serif;
+}
+
+.card h5 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .card p {
-    text-shadow: 0 0 5px #000;
-    font-size: 12px;
-    text-decoration: none;
-    color: #fff;
-    font-family: "Minecraft";
-}
-
-.card a {
-    font-family: "Minecraft";
+    text-shadow: 1px 1px 3px #000;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #ddd;
+    font-family: "Mojang", sans-serif;
+    margin: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
 }
 
-.card1 {
-    background-image: url('images/entrenched.png');
+.card1 { background-image: url('images/entrenched.png'); }
+.card2 { background-image: url('images/doktorcurse.png'); }
+.card3 { background-image: url('images/peakshore.png'); }
+.card4 { background-image: url('images/capitalism.png'); }
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
-.card2 {
-    background-image: url('images/doktorcurse.png');
+.card:hover::after {
+    opacity: 0.85;
 }
 
-.card3 {
-    background-image: url('images/peakshore.png');
+/* Homepage banner */
+.header-banner {
+    width: 75%;
+    max-width: 1200px;
+    height: 450px;
+    margin: 50px auto 0 auto;
+    background-image: url('images/Hypixel-bg-artwork.webp');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card4 {
-    background-image: url('images/capitalism.png');
+.header-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to bottom, rgba(18,18,18,0) 10%, #121212 95%),
+        linear-gradient(to right, #121212 0%, transparent 15%),
+        linear-gradient(to left, #121212 0%, transparent 15%);
+    z-index: 1;
 }
 
-.card1:hover {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/entrenched.png');
+.banner-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
-.card2:hover {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/doktorcurse.png');
+.banner-text h1 {
+    margin: 0;
+    font-size: 80px;
+    margin-left: 0;
 }
 
-.card3:hover {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/peakshore.png');
+.banner-text h2 {
+    margin: 0;
+    font-size: 50px;
+    position: static;
+    margin-left: 0;
 }
 
-.card4:hover {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/capitalism.png');
+/* Main content area */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #121212;
+}
+
+.housingimg img {
+    width: 350px;
+    position: static;
+}
+
+.info-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    font-family: "Mojang", sans-serif;
 }
