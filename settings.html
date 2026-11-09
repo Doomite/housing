@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOUSING</title>
-    <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
     <div class="container">
         <nav>
             <ul>
@@ -16,12 +18,16 @@
                 <li><a href="houses.html">Houses</a></li>
                 <li><a href="https://hypixel.net/">mc.hypixel.net</a></li>
             </ul>
-            </nav>
+        </nav>
+    </div>
 
-</div>
-</head>
-<body>
-    <div class="background"></div>
+    <div class="header-banner index-banner">
+        <div class="banner-text">
+            <h1>HOUSING SETTINGS</h1>
+            <h2>"CONFIGURATION"</h2>
+        </div>
+    </div>
+
 <br>House Settings is a menu that controls global settings for a specific house.
 
 
@@ -36,31 +42,31 @@
     <tbody>
         <tr>
             <td>Time Selector</td>
-            <td>Select the time of your house: noon, midnight, day. Can also be set with /time</td>
+            <td>Set the time and whether the daylight cycle is enabled or disabled. (Default: 6 am, Daylight cycle disabled)</td>
         </tr>
         <tr>
             <td>Max Players</td>
-            <td>Set the maximum number of players allowed in your house at once.</td>
+            <td>Set the maximum number of players allowed in the house at one time, up to 150. The "Dynamic" option changes the cap depending on server resources and performance (max 250). (Default: 30)</td>
         </tr>
         <tr>
             <td>House Name</td>
-            <td>Change the title of your house displayed on the house browser and scoreboard.</td>
+            <td>Set the name of the house displayed in the My Houses menu and the House Browser. (Default: "<Color> House")</td>
         </tr>
         <tr>
             <td>Plot Size</td>
-            <td>Upgrade your house plot dimensions (31x31, 41x41, 51x51) using Mystery Dust.</td>
+            <td>Change the maximum amount of buildable space; upgradeable with Mystery Dust. Sizes: 31x31, 41x41, 51x51, 101x101x101, 255x255x255 (Housing+ only). Sizes of 101x101x101 and above work with any theme, though some themes may cut off at these sizes. Changing the theme resets everything outside the original 51x51 area.</td>
         </tr>
         <tr>
             <td>House Tags</td>
-            <td>Assign categories/tags to your house to help players find it in the public browser.</td>
+            <td>	Apply categories to the house to make it easier to find its given content. Up to three are selectable at once.</td>
         </tr>
         <tr>
             <td>House Language</td>
-            <td>Specify the primary spoken language of your housing plot.</td>
+            <td>Apply a language tag to the house to make foreign language houses more discoverable.</td>
         </tr>
         <tr>
             <td>Cookie Jar</td>
-            <td>View, manage, or clear the cookies given to your house by visiting players.</td>
+            <td>View how many cookies the house has and how many cookie packs the player has left to give out for the week.</td>
         </tr>
         <tr>
             <td>Toggles</td>
@@ -68,7 +74,7 @@
         </tr>
         <tr>
             <td>Player Data</td>
-            <td>View, edit, or reset saved stats, inventories, and custom variables for players.</td>
+            <td>Controls what is saved about players after they leave the house. Player states and player variables can each be kept for a set duration, up to 30 days, or up to 1 year with Housing+, and individual variables can have their own duration. The saved state types can also be toggled: location and flight status; parkour progress; health, max health, and food level; inventory and armor; Ender Chest contents; held item slot; active potion effects; and team. (Default: Durations disabled)</td>
         </tr>
         <tr>
             <td>PvP + Damage Settings</td>
