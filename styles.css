@@ -28,6 +28,11 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: "Mono";
+    src: url("fonts/5₧5.ttf") format("truetype");
+}
+
 /* Global styles */
 body {
     font-family: "Neuton", serif;
@@ -203,7 +208,7 @@ th {
     max-width: 1200px;
 }
 
-.house h5, .script h5, .mod h5 {
+.house h5, .script h5{
     color: #fff;
     text-shadow: 2px 2px 4px #000;
     font-size: 16px;
@@ -212,7 +217,7 @@ th {
     z-index: 2;
 }
 
-.house h6, .script h6, .mod h6 {
+.house h6, .script h6{
     color: #fff;
     text-shadow: 2px 2px 4px #000;
     font-size: 12px;
@@ -221,7 +226,7 @@ th {
     z-index: 2;
 }
 
-.house p, .script p, .mod p {
+.house p, .script p{
     text-shadow: 1px 1px 3px #000;
     font-size: 11px;
     line-height: 1.4;
@@ -237,16 +242,21 @@ th {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
 }
 
+/* House Images */
 .house1 { background-image: url('images/entrenched.png'); }
 .house2 { background-image: url('images/doktorcurse.png'); }
 .house3 { background-image: url('images/peakshore.png'); }
 .house4 { background-image: url('images/capitalism.png'); }
+
+/* Script Images */
 .script1 { background-image: url('mcitems/detectorrail.png'); }
 .script2 { background-image: url('mcitems/enderchest.png'); }
 .script3 { background-image: url('mcitems/reddye.png'); }
 .script4 { background-image: url('mcitems/diamondsword.png'); }
 .script5 { background-image: url('mcitems/clock.png'); }
 .script6 { background-image: url('mcitems/emerald.png'); }
+
+/* Mod Images */
 .mod1 { background-image: url('mods/htslreborn.png'); }
 .mod2 { background-image: url('mods/systemsapi.png'); }
 .mod3 { background-image: url('mods/housingstudio.png'); }
@@ -255,7 +265,7 @@ th {
 .mod6 { background-image: url('mods/housingtoolbox.png'); }
 .mod7 { background-image: url('mods/anvil.png'); }
 
-.house::after, .script::after, .mod::after{
+.house::after, .script::after{
     content: '';
     position: absolute;
     top: 0;
@@ -270,6 +280,103 @@ th {
 
 .house:hover::after, .script::hover::after, .mod::hover::after{
     opacity: 0.85;
+}
+
+/* Flip Card Mod */
+.mod-flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    font-family: "Mojang", sans-serif;
+}
+
+.mod-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.mod-flip-card:hover .mod-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.mod-front, .mod-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.mod-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center;
+    background-size: cover;
+}
+
+.mod-front::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.mod-back {
+    background-color: #1B1F23;
+    border: 2px solid #fff;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mod-front h5, .mod-back h5 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.mod-back h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.mod-front h6 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 12px;
+    margin: 0 0 8px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.mod-back p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #ddd;
+    margin: 0;
 }
 
 /* Homepage banner */
@@ -360,4 +467,13 @@ th {
     line-height: 1.6;
     color: #ddd;
     font-family: "Mojang", sans-serif;
+}
+
+.badge {
+  background-color: blue;
+  color: white;
+  padding: 1px 2px;
+  text-align: center;
+  font-family: Mono;
+  max-width: 50px;
 }
