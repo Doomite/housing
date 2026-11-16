@@ -34,7 +34,7 @@ body {
     color: white;
     margin: 0;
     padding-top: 0;
-    background-color: #121212;
+    background-color: #14171A;
 }
 
 .container {
@@ -171,6 +171,25 @@ th {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+
+    transition: transform 0.3s ease;
+    font-family: "Mojang", sans-serif;
+    background-color: #1B1F23;
+}
+
+.mod {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     border-radius: 12px;
     padding: 20px;
     box-sizing: border-box;
@@ -181,9 +200,10 @@ th {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
     transition: transform 0.3s ease;
     font-family: "Mojang", sans-serif;
+    max-width: 1200px;
 }
 
-.house h5, .script h5 {
+.house h5, .script h5, .mod h5 {
     color: #fff;
     text-shadow: 2px 2px 4px #000;
     font-size: 16px;
@@ -192,7 +212,7 @@ th {
     z-index: 2;
 }
 
-.house h6, .script h6 {
+.house h6, .script h6, .mod h6 {
     color: #fff;
     text-shadow: 2px 2px 4px #000;
     font-size: 12px;
@@ -201,7 +221,7 @@ th {
     z-index: 2;
 }
 
-.house p, .script p {
+.house p, .script p, .mod p {
     text-shadow: 1px 1px 3px #000;
     font-size: 11px;
     line-height: 1.4;
@@ -212,7 +232,7 @@ th {
     z-index: 2;
 }
 
-.house:hover,.script:hover {
+.house:hover,.script:hover, .mod:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
 }
@@ -222,8 +242,20 @@ th {
 .house3 { background-image: url('images/peakshore.png'); }
 .house4 { background-image: url('images/capitalism.png'); }
 .script1 { background-image: url('mcitems/detectorrail.png'); }
+.script2 { background-image: url('mcitems/enderchest.png'); }
+.script3 { background-image: url('mcitems/reddye.png'); }
+.script4 { background-image: url('mcitems/diamondsword.png'); }
+.script5 { background-image: url('mcitems/clock.png'); }
+.script6 { background-image: url('mcitems/emerald.png'); }
+.mod1 { background-image: url('mods/htslreborn.png'); }
+.mod2 { background-image: url('mods/systemsapi.png'); }
+.mod3 { background-image: url('mods/housingstudio.png'); }
+.mod4 { background-image: url('mods/neohouse.png'); }
+.mod5 { background-image: url('mods/housingcreativetab.png'); }
+.mod6 { background-image: url('mods/housingtoolbox.png'); }
+.mod7 { background-image: url('mods/anvil.png'); }
 
-.house::after, .script::after{
+.house::after, .script::after, .mod::after{
     content: '';
     position: absolute;
     top: 0;
@@ -236,7 +268,7 @@ th {
     z-index: 1;
 }
 
-.house:hover::after, .script::hover::after{
+.house:hover::after, .script::hover::after, .mod::hover::after{
     opacity: 0.85;
 }
 
@@ -257,16 +289,16 @@ th {
 .index-banner {
         background-image: url('images/Hypixel-bg-artwork.webp');
 }
-.settings-banner {
-        background-image: url('images/Hypixel-bg-artwork.webp');
+.tools-banner {
+        background-image: url('images/hypixelhousing.png');
 }
 
-.actions-banner {
+.mods-banner {
         background-image: url('images/housingmenu.png');
 }
 
-.systems-banner {
-        background-image: url('images/Hypixel-bg-artwork.webp');
+.templates-banner {
+        background-image: url('images/housinglobby.png');
 }
 
 .houses-banner {
@@ -282,9 +314,9 @@ th {
     width: 100%;
     height: 100%;
     background: 
-        linear-gradient(to bottom, rgba(18,18,18,0) 10%, #121212 95%),
-        linear-gradient(to right, #121212 0%, transparent 15%),
-        linear-gradient(to left, #121212 0%, transparent 15%);
+        linear-gradient(to bottom, rgba(18,18,18,0) 10%, #14171A 95%),
+        linear-gradient(to right, #14171A 0%, transparent 15%),
+        linear-gradient(to left, #14171A 0%, transparent 15%);
     z-index: 1;
 }
 
@@ -315,7 +347,7 @@ th {
     display: flex;
     align-items: center;
     gap: 40px;
-    background-color: #121212;
+    background-color: #14171A;
 }
 
 .housing-img img {
